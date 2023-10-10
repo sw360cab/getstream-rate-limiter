@@ -1,6 +1,6 @@
 module github.com/sw360cab/getstream-rate-limiter
 
-go 1.19
+go 1.21
 
 require (
 	github.com/GetStream/stream-chat-go/v6 v6.5.0

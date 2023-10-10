@@ -4,7 +4,7 @@
 
 This module is my own solution to overcome rate limits for GetStream's API Endpoints when employing Go SDK.
 
-Check reasons for creating this in my [blog post](https://dev.to/sw360cab/handling-rate-limits-in-getstream-api-calls-in-go-leveraging-channels-and-go-routines-414b-temp-slug-7513238)
+Check reasons for creating this in my [blog post](https://dev.to/sw360cab/handling-rate-limits-in-getstream-api-calls-in-go-leveraging-channels-and-goroutines-29a4)
 
 ## Installing
 
@@ -50,7 +50,7 @@ rateLimiterMap := map[GetStreamApiName]RateLimiter{
 }
 ```
 
-a method to call `QueryChannel` api leveraging `RateLimiter` can be defined as follows:
+a method to call GetStream `QueryChannel` Api, leveraging `RateLimiter`, can be defined as follows:
 
 ```go
 func queryChannels(filters map[string]any) (queryResp *stream.QueryChannelsResponse, err error) {
